@@ -1,0 +1,44 @@
+<!-- Copyright Stanton Web Applications, 2012 -->
+
+<html>
+<body>
+
+<script type='text/javascript'>
+
+var maxSize = 11;
+var chairs = new Array(maxSize);
+
+for (i=0;i<maxSize;i++) {
+	chairs[i] = i+1;
+}
+
+var removeChair = true; // flag if set will remove chair, we toggle this every other (non-zero) chair, until we are left w/ just one chair
+var removedChairs =0;
+for (i=0;i<maxSize;i++) {
+
+	// set every other non-zero chair to 0
+	// 0 denotes chair is removed
+	// if chair is not 0, check if flag is set to remove chair, if true, set chair to zero, and toggle flag, then check next chair
+	// if chair is 0, check next chair
+	if (chairs[i] > 0) {
+		document.write("checking chair : " +  chairs[i] + "<br />\n");
+		if (removedChairs == (maxSize-1)) {
+			document.writeln("chair: " +chairs[i] + " survived ... done<br />\n");
+			break;
+		}
+
+		if (removeChair && (removedChairs < maxSize)) { // if the flag is true, remove chair if we have more than 1 remaining otherwise stop
+			removedChairs++;
+			document.writeln("chair: " + chairs[i] + " removed, " + ( maxSize - removedChairs) + " remaining ...<br/>\n");
+			chairs[i] = 0;
+		}
+		removeChair = !removeChair;
+	}
+	
+	//set to begining of loop when the end is reached
+        if (i == (maxSize-1)) i=0;
+}
+</script>
+
+</body>
+</html>
