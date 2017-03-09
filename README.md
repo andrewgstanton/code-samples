@@ -11,5 +11,5 @@
 # PHP
 # -> php/cake-php -- some simple examples of using a user and video controlere class for hosting user video profiles 
 # JAVASCRIPT
-# -> embedded js that illustrates an example of using musical chairs
+# -> js/musical-chairs.html - embedded js (in a web page) that illustrates an example of using musical chairs
 
