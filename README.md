@@ -1,6 +1,8 @@
 # code-samples
 2017-03-07
+
 Copyright 2017, Stanton Web Applications, Inc
+
 MIT License.  Free to use and distribute.
 
 This repo illustrates short examples of code written in various languages, including PHP, Java, and javascript
